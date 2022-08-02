@@ -26,7 +26,7 @@ TOR_CRYPTOS = {"btc": CRYPTOS["btc"]}  # cryptos to enable tor proxy for
 CRYPTO_COMPONENTS = [CRYPTOS[i]["component"] for i in CRYPTOS]
 
 # Installation packs
-BACKEND_COMPONENTS = ["backend", "worker", "postgres", "redis"]
+BACKEND_COMPONENTS = ["backend", "worker", "redis"]
 FRONTEND_COMPONENTS = ["store", "admin"]
 
 # One domain mode constants
@@ -44,5 +44,10 @@ AVAILABLE_SETTINGS = [
     ("STORE_HOST",),
     ("ADMIN_API_URL",),
     ("STORE_API_URL",),
+    ("DB_HOST",),
+    ("DB_PORT",),
+    ("DB_DATABASE",),
+    ("DB_USER",),
+    ("DB_PASSWORD",),
 ]
 ENV_PREFIX = "BITCART_"

@@ -8,8 +8,11 @@ services:
       BITCART_DATADIR: /datadir
       BITCART_BACKUPS_DIR: /backups
       BITCART_VOLUMES: /datadir /backups
-      DB_PORT: 5432
-      DB_HOST: database
+      DB_HOST: ${BITCART_DB_HOST}
+      DB_PORT: ${BITCART_DB_PORT}
+      DB_DATABASE: ${BITCART_DB_DATABASE}
+      DB_USER: ${BITCART_DB_USER}
+      DB_PASSWORD: ${BITCART_DB_PASSWORD}
       VIRTUAL_NETWORK: nginx-proxy
       VIRTUAL_PORT: 8000
       VIRTUAL_HOST: ${BITCART_HOST}
